@@ -1,6 +1,6 @@
 {
   "name": "schema_types_generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lib for generating DB schema types for typescript",
   "main": "src/index.js",
   "scripts": {
