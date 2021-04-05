@@ -13,15 +13,6 @@ __v: number;
 _id: string;
 }
 
-type receiptsProp = { 
-images: Array<string>;
-location: string;
-date: Date;
-user: usersProp;
-__v: number;
-_id: string;
-}
-
 type reviewsProp = { 
 comment: string;
 hotel: string;
@@ -32,14 +23,11 @@ __v: number;
 _id: string;
 }
 
-type invited_usersProp = { 
-password: string;
-date_created: Date;
-limit: string;
-limit_amount: null;
+type receiptsProp = { 
+images: Array<string>;
+location: string;
+date: Date;
 user: usersProp;
-email: string;
-name: string;
 __v: number;
 _id: string;
 }
@@ -57,6 +45,18 @@ price: string;
 __v: number;
 departure_airport: string;
 arrival_airport: string;
+_id: string;
+}
+
+type invited_usersProp = { 
+password: string;
+date_created: Date;
+limit: string;
+limit_amount: null;
+user: usersProp;
+email: string;
+name: string;
+__v: number;
 _id: string;
 }
 
@@ -139,61 +139,6 @@ __v: number;
 _id: string;
 }
 
-type usersProp = { 
-verified: boolean;
-access: number;
-pics: string;
-name: string;
-email: string;
-password: string;
-auth_id: null;
-date_created: Date;
-account_type: string;
-__v: number;
-_id: string;
-}
-
-type agenciesProp = { 
-logo: string;
-created_at: Date;
-email: string;
-name: string;
-address: string;
-phone: string;
-priviledge: number;
-__v: number;
-_id: string;
-}
-
-type flight_bookingsProp = { 
-type: string;
-flight_id: flightsProp;
-user: string;
-no_of_people: string;
-price: number;
-__v: number;
-_id: string;
-}
-
-type roomsProp = { 
-perks: Array<string>;
-images: string;
-price: string;
-available: number;
-type: string;
-__v: number;
-_id: string;
-}
-
-type bookingsProp = { 
-type: string;
-details: string;
-start_date: string;
-end_date: string;
-__v: number;
-_id: string;
-}
-
 type car_bookingsProp = { 
 type: string;
 start_date: Date;
@@ -222,6 +167,18 @@ __v: number;
 _id: string;
 }
 
+type venue_bookingsProp = { 
+type: string;
+start_date: Date;
+end_date: Date;
+duration: number;
+venue_id: venuesProp;
+user: string;
+price: number;
+__v: number;
+_id: string;
+}
+
 type venue_reviewsProp = { 
 comment: string;
 venue: string;
@@ -240,14 +197,57 @@ __v: number;
 _id: string;
 }
 
-type venue_bookingsProp = { 
+type usersProp = { 
+verified: boolean;
+access: number;
+pics: string;
+name: string;
+email: string;
+password: string;
+auth_id: null;
+date_created: Date;
+account_type: string;
+__v: number;
+_id: string;
+}
+
+type agenciesProp = { 
+logo: string;
+created_at: Date;
+email: string;
+name: string;
+address: string;
+phone: string;
+priviledge: number;
+__v: number;
+_id: string;
+}
+
+type roomsProp = { 
+perks: Array<string>;
+images: string;
+price: string;
+available: number;
 type: string;
-start_date: Date;
-end_date: Date;
-duration: number;
-venue_id: venuesProp;
+__v: number;
+_id: string;
+}
+
+type flight_bookingsProp = { 
+type: string;
+flight_id: flightsProp;
 user: string;
+no_of_people: string;
 price: number;
+__v: number;
+_id: string;
+}
+
+type bookingsProp = { 
+type: string;
+details: string;
+start_date: string;
+end_date: string;
 __v: number;
 _id: string;
 }

@@ -2,7 +2,7 @@
   "name": "schema_types_generator",
   "version": "1.0.0",
   "description": "A lib for generating DB schema types for typescript",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

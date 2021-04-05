@@ -15,7 +15,7 @@ const fs = require("fs");
  * @param {Object} options
  */
 
-const generateMongoTypes = (options) => {
+exports.generateMongoTypes = (options) => {
   var uriObject = mongodbUri.parse(options.uri);
   fs.writeFile(options.path, "\n", (err) => {
     if (!err) {
@@ -159,8 +159,3 @@ const writeObject = (obj, key, indent, path) => {
 
 const maybePluralize = (count, noun, suffix = "s") =>
   `${noun}${count !== 1 ? suffix : ""}`;
-
-generateMongoTypes({
-  uri: "mongodb+srv://place:place-locate@roadshow-jhhwo.mongodb.net/test",
-  path: "types.ts",
-});
