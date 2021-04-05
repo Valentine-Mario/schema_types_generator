@@ -1,3 +1,3 @@
-const mongogen=require("./mongo");
+const {generateMongoTypes}=require("./mongo");
 
-exports.generateMongoTypes=mongogen;
+exports.generateMongoTypes=generateMongoTypes;
